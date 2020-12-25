@@ -54,5 +54,18 @@ namespace TimeCounter
                 timer1.Enabled = false;
         }
 
+        private void buttonStop_Click(object sender, EventArgs e)
+        {
+            buttonStart.Enabled = true;
+            buttonStop.Enabled = false;
+
+            labelOutput.Visible = false;
+            inputMinutes.Visible = true;
+            inputSeconds.Visible = true;
+
+            totalSeconds = 0;
+            timer1.Enabled = false;
+        }
+
     }
 }
