@@ -33,5 +33,26 @@ namespace TimeCounter
             timer1.Enabled = true;
         }
 
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (totalSeconds > 0)
+            {
+                totalSeconds--;
+                int minutes = totalSeconds / 60;
+                int seconds = totalSeconds - (minutes * 60);
+
+                if (minutes < 10 && seconds >= 10)
+                    labelOutput.Text = '0' + minutes.ToString() + ':' + seconds.ToString();
+                else if (minutes >= 10 && seconds < 10)
+                    labelOutput.Text = minutes.ToString() + ':' + '0' + seconds.ToString();
+                else if (minutes >= 10 && seconds >= 10)
+                    labelOutput.Text = minutes.ToString() + ':' + seconds.ToString();
+                else
+                    labelOutput.Text = '0' + minutes.ToString() + ':' + '0' + seconds.ToString();
+            }
+            else
+                timer1.Enabled = false;
+        }
+
     }
 }
