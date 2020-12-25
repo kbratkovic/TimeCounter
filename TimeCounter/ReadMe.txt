@@ -1,0 +1,2 @@
+﻿Simple time counter
+
