@@ -34,6 +34,16 @@ namespace TimeCounter
             int seconds = int.Parse(inputSeconds.SelectedItem.ToString());
             totalSeconds = (minutes * 60) + seconds;
 
+
+            if (minutes < 10 && seconds >= 10)
+                labelOutput.Text = '0' + minutes.ToString() + ':' + seconds.ToString();
+            else if (minutes >= 10 && seconds < 10)
+                labelOutput.Text = minutes.ToString() + ':' + '0' + seconds.ToString();
+            else if (minutes >= 10 && seconds >= 10)
+                labelOutput.Text = minutes.ToString() + ':' + seconds.ToString();
+            else
+                labelOutput.Text = '0' + minutes.ToString() + ':' + '0' + seconds.ToString();
+
             timer1.Enabled = true;
         }
 
