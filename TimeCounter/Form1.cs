@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace TimeCounter
@@ -17,6 +18,9 @@ namespace TimeCounter
                 inputMinutes.Items.Add(i.ToString());
                 inputSeconds.Items.Add(i.ToString());
             }
+
+            inputMinutes.SelectedIndex = 45;
+            inputSeconds.SelectedIndex = 0;
         }
 
         private void buttonStart_Click(object sender, EventArgs e)
@@ -49,6 +53,11 @@ namespace TimeCounter
                     labelOutput.Text = minutes.ToString() + ':' + seconds.ToString();
                 else
                     labelOutput.Text = '0' + minutes.ToString() + ':' + '0' + seconds.ToString();
+
+                if (minutes < 5 && (seconds % 2 != 0))
+                    labelOutput.ForeColor = Color.Gray;
+                else
+                    labelOutput.ForeColor = Color.Black;
             }
             else
                 timer1.Enabled = false;
