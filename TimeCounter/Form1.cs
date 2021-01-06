@@ -2,12 +2,14 @@
 using System.Drawing;
 using System.Media;
 using System.Windows.Forms;
+using System.ComponentModel;
 
 namespace TimeCounter
 {
     public partial class Form1 : Form
     {
         private int totalSeconds;
+        SoundPlayer player = new SoundPlayer(@"C:\Users\kbrat\Desktop\VsiTe\4. godina\CSH\Seminar-odbrojavanje vremena\TimeCounter\TimeCounter\alert.wav");
 
         public Form1()
         {
@@ -65,20 +67,25 @@ namespace TimeCounter
                 else
                     labelOutput.Text = '0' + minutes.ToString() + ':' + '0' + seconds.ToString();
 
-                if (minutes < 5 && (seconds % 2 != 0))
-                { 
-                    labelOutput.ForeColor = Color.Gray;
-                    SystemSounds.Exclamation.Play();
-                }
+            if (minutes < 5 && (seconds % 2 != 0))
+            { 
+                labelOutput.ForeColor = Color.Gray;
+                player.Play();
+            }
             else
                 labelOutput.ForeColor = Color.Black;
             }
-            else
+
+            if (totalSeconds == 0)
+            {
+                player.Stop();
                 timer1.Enabled = false;
+            }
         }
 
         private void buttonStop_Click(object sender, EventArgs e)
         {
+            player.Stop();
             buttonStart.Enabled = true;
             buttonStop.Enabled = false;
 
@@ -90,5 +97,19 @@ namespace TimeCounter
             timer1.Enabled = false;
         }
 
+        protected override void OnClosing(CancelEventArgs e)
+        {
+            if (timer1.Enabled)
+                e.Cancel = true;
+            base.OnClosing(e);
+        }
+
+        private void checkBox_CheckedChanged(object sender, EventArgs e)
+        {
+            TopMost = false;
+
+            if (checkBox.Checked)
+                TopMost = true;            
+        }
     }
 }
