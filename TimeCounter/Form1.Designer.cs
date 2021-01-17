@@ -81,6 +81,7 @@
             // 
             // inputMinutes
             // 
+            this.inputMinutes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.inputMinutes.FormattingEnabled = true;
             this.inputMinutes.Location = new System.Drawing.Point(84, 73);
             this.inputMinutes.Name = "inputMinutes";
@@ -89,6 +90,7 @@
             // 
             // inputSeconds
             // 
+            this.inputSeconds.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.inputSeconds.FormattingEnabled = true;
             this.inputSeconds.Location = new System.Drawing.Point(231, 73);
             this.inputSeconds.Name = "inputSeconds";
@@ -133,8 +135,8 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(452, 380);
-            this.Controls.Add(this.checkBox);
             this.Controls.Add(this.labelOutput);
+            this.Controls.Add(this.checkBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.inputSeconds);
             this.Controls.Add(this.inputMinutes);
