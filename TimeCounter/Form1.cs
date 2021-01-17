@@ -9,7 +9,7 @@ namespace TimeCounter
     public partial class Form1 : Form
     {
         private int totalSeconds;
-        SoundPlayer player = new SoundPlayer(@"C:\Users\kbrat\Desktop\VsiTe\4. godina\CSH\Seminar-odbrojavanje vremena\TimeCounter\TimeCounter\alert.wav");
+        SoundPlayer player = new SoundPlayer(Properties.Resources.alert);
 
         public Form1()
         {

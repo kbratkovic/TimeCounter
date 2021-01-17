@@ -70,7 +70,7 @@
             this.label.AutoSize = true;
             this.label.Location = new System.Drawing.Point(80, 41);
             this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(69, 20);
+            this.label.Size = new System.Drawing.Size(87, 25);
             this.label.TabIndex = 4;
             this.label.Text = "Minutes:";
             // 
@@ -84,7 +84,7 @@
             this.inputMinutes.FormattingEnabled = true;
             this.inputMinutes.Location = new System.Drawing.Point(84, 73);
             this.inputMinutes.Name = "inputMinutes";
-            this.inputMinutes.Size = new System.Drawing.Size(121, 28);
+            this.inputMinutes.Size = new System.Drawing.Size(121, 33);
             this.inputMinutes.TabIndex = 5;
             // 
             // inputSeconds
@@ -92,7 +92,7 @@
             this.inputSeconds.FormattingEnabled = true;
             this.inputSeconds.Location = new System.Drawing.Point(231, 73);
             this.inputSeconds.Name = "inputSeconds";
-            this.inputSeconds.Size = new System.Drawing.Size(121, 28);
+            this.inputSeconds.Size = new System.Drawing.Size(121, 33);
             this.inputSeconds.TabIndex = 6;
             // 
             // label1
@@ -100,7 +100,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(227, 41);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 20);
+            this.label1.Size = new System.Drawing.Size(96, 25);
             this.label1.TabIndex = 7;
             this.label1.Text = "Seconds:";
             // 
@@ -110,7 +110,7 @@
             this.labelOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 100F, System.Drawing.FontStyle.Bold);
             this.labelOutput.Location = new System.Drawing.Point(24, 41);
             this.labelOutput.Name = "labelOutput";
-            this.labelOutput.Size = new System.Drawing.Size(407, 153);
+            this.labelOutput.Size = new System.Drawing.Size(503, 189);
             this.labelOutput.TabIndex = 8;
             this.labelOutput.Text = "00:00";
             this.labelOutput.Visible = false;
@@ -120,7 +120,7 @@
             this.checkBox.AutoSize = true;
             this.checkBox.Location = new System.Drawing.Point(170, 309);
             this.checkBox.Name = "checkBox";
-            this.checkBox.Size = new System.Drawing.Size(133, 24);
+            this.checkBox.Size = new System.Drawing.Size(169, 29);
             this.checkBox.TabIndex = 9;
             this.checkBox.Text = "Always On Top";
             this.checkBox.UseVisualStyleBackColor = true;
@@ -128,11 +128,11 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(454, 388);
+            this.ClientSize = new System.Drawing.Size(452, 380);
             this.Controls.Add(this.checkBox);
             this.Controls.Add(this.labelOutput);
             this.Controls.Add(this.label1);
